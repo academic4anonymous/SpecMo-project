@@ -1,0 +1,348 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SpecMo: Spectral Control for Coherent and Diverse Single-to-Many Motion Synthesis</title>
+    <meta
+      name="description"
+      content="Anonymous project page for SpecMo, a frequency-aware framework for coherent and diverse single-to-many motion synthesis."
+    >
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="#">SpecMo</a>
+      <nav aria-label="Page navigation">
+        <a href="#demo-video">Demo</a>
+        <a href="#generation">Generation</a>
+        <a href="#abstract">Abstract</a>
+        <a href="#framework">Framework</a>
+        <a href="#results">Results</a>
+        <a href="#applications">Applications</a>
+        <a href="#citation">BibTeX</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <h1>SpecMo:<br>Spectral Control for Coherent and Diverse Single-to-Many Motion Synthesis</h1>
+        <p class="authors">Anonymous Author(s)</p>
+        <p class="tagline">Generating many plausible motion variations from one reference sequence.</p>
+
+        <div class="link-row" aria-label="Project links">
+          <a href="assets/specmo-paper.pdf">Paper</a>
+          <a href="#demo-video">Videos</a>
+          <a href="#results">Results</a>
+          <a href="#citation">BibTeX</a>
+        </div>
+
+        <figure class="media-frame hero-figure">
+          <img src="assets/figures/teaser.png" alt="SpecMo teaser showing coherent and diverse crowd generation.">
+          <figcaption>
+            Given a single reference motion, SpecMo generates many plausible variations according to user preference, from coherent crowds that preserve global trends to diverse crowds that enhance individual differences.
+          </figcaption>
+        </figure>
+      </section>
+
+      <section id="demo-video" class="section demo-first">
+        <div class="section-heading">
+          <h2>Demo Video</h2>
+          <p>Select voiced or silent mode first, then play the demo.</p>
+        </div>
+
+        <div class="demo-toggle">
+          <input type="radio" id="demo-voiced" name="demo-mode" checked>
+          <input type="radio" id="demo-silent" name="demo-mode">
+
+          <div class="demo-picker" role="radiogroup" aria-label="Demo audio mode selector">
+            <label for="demo-voiced">Voiced</label>
+            <label for="demo-silent">Silent</label>
+          </div>
+
+          <div class="demo-switcher">
+            <figure class="media-frame demo-player demo-player-voiced">
+              <video controls preload="metadata" playsinline>
+                <source src="demo_video/specmo_demo_voiced.mp4" type="video/mp4">
+              </video>
+              <figcaption>Narrated demo version.</figcaption>
+            </figure>
+
+            <figure class="media-frame demo-player demo-player-silent">
+              <video controls preload="metadata" playsinline>
+                <source src="demo_video/specmo_demo.mp4" type="video/mp4">
+              </video>
+              <figcaption>Silent demo version.</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section id="generation" class="section">
+        <div class="section-heading">
+          <h2>Single-to-Many Generation</h2>
+          <p>SpecMo synthesizes many plausible variations across humanoid characters and non-human creatures from one reference motion.</p>
+        </div>
+        <div class="featured-videos">
+          <figure class="video-card">
+            <video autoplay muted loop playsinline preload="metadata">
+              <source src="assets/videos/teasers/dance.mp4" type="video/mp4">
+            </video>
+            <figcaption>Dance</figcaption>
+          </figure>
+          <figure class="video-card">
+            <video autoplay muted loop playsinline preload="metadata">
+              <source src="assets/videos/teasers/dragon.mp4" type="video/mp4">
+            </video>
+            <figcaption>Dragon</figcaption>
+          </figure>
+        </div>
+        <div class="video-mosaic">
+          <figure class="video-card">
+            <video autoplay muted loop playsinline preload="metadata">
+              <source src="assets/videos/teasers/spider.mp4" type="video/mp4">
+            </video>
+            <figcaption>Spider</figcaption>
+          </figure>
+          <figure class="video-card">
+            <video autoplay muted loop playsinline preload="metadata">
+              <source src="assets/videos/teasers/monkey.mp4" type="video/mp4">
+            </video>
+            <figcaption>Monkey</figcaption>
+          </figure>
+          <figure class="video-card">
+            <video autoplay muted loop playsinline preload="metadata">
+              <source src="assets/videos/teasers/crab.mp4" type="video/mp4">
+            </video>
+            <figcaption>Crab</figcaption>
+          </figure>
+          <figure class="video-card">
+            <video autoplay muted loop playsinline preload="metadata">
+              <source src="assets/videos/teasers/anaconda.mp4" type="video/mp4">
+            </video>
+            <figcaption>Anaconda</figcaption>
+          </figure>
+          <figure class="video-card">
+            <video autoplay muted loop playsinline preload="metadata">
+              <source src="assets/videos/teasers/lion.mp4" type="video/mp4">
+            </video>
+            <figcaption>Lion</figcaption>
+          </figure>
+          <figure class="video-card">
+            <video autoplay muted loop playsinline preload="metadata">
+              <source src="assets/videos/teasers/turtle.mp4" type="video/mp4">
+            </video>
+            <figcaption>Turtle</figcaption>
+          </figure>
+          <figure class="video-card">
+            <video autoplay muted loop playsinline preload="metadata">
+              <source src="assets/videos/teasers/bird.mp4" type="video/mp4">
+            </video>
+            <figcaption>Bird</figcaption>
+          </figure>
+          <figure class="video-card">
+            <video autoplay muted loop playsinline preload="metadata">
+              <source src="assets/videos/teasers/bird_circle_land.mp4" type="video/mp4">
+            </video>
+            <figcaption>Bird Circle</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section id="abstract" class="section text-section">
+        <h2>Abstract</h2>
+        <p>
+          Single-motion synthesis generates diverse motion variations from only one reference sequence, which is useful for customized characters, non-humanoid creatures, and other data-scarce animation scenarios. Existing methods often rely on local modeling to avoid memorization, but provide limited guidance for long-range motion trends and limited control over how generated samples should remain consistent or vary.
+        </p>
+        <p>
+          We present <strong>SpecMo</strong>, an efficient frequency-aware framework for single-to-many motion synthesis. SpecMo uses <strong>LocalDiT</strong>, a lightweight diffusion transformer with sliding-window local attention, to learn reusable motion motifs from a single example. A <strong>Global Spectral Prior</strong> preserves low-frequency structure during training, while <strong>Batch Spectral Control</strong> refines the initial noise batch at inference time to steer generation toward coherent or diverse results.
+        </p>
+      </section>
+
+      <section id="framework" class="section">
+        <div class="section-heading">
+          <h2>Framework</h2>
+          <p>SpecMo combines local motion modeling, spectral structure, and batch-level control.</p>
+        </div>
+        <figure class="media-frame">
+          <img src="assets/figures/framework.png" alt="Overview of the SpecMo framework.">
+          <figcaption>
+            LocalDiT captures reusable motion motifs, GSP preserves low-frequency trends, and BSC controls batch coherence and diversity.
+          </figcaption>
+        </figure>
+        <div class="method-grid">
+          <article>
+            <h3>LocalDiT</h3>
+            <p>Sliding-window local attention learns short-term motifs from one sequence while reducing direct memorization.</p>
+          </article>
+          <article>
+            <h3>Global Spectral Prior</h3>
+            <p>Low-frequency DCT regularization gives soft guidance for trajectory shape, periodicity, and motion flow.</p>
+          </article>
+          <article>
+            <h3>Batch Spectral Control</h3>
+            <p>Frequency-domain pull and push objectives steer a batch toward shared structure or broader variation.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="results" class="section">
+        <div class="section-heading">
+          <h2>Main Results</h2>
+          <p>SpecMo preserves characteristic motion events while producing rich variations from the same reference.</p>
+        </div>
+        <div class="stacked-results">
+          <figure class="media-frame">
+            <video autoplay muted loop playsinline preload="auto">
+              <source src="assets/videos/compare/video_compare.mp4" type="video/mp4">
+            </video>
+            <figcaption>Qualitative comparison on complex motion patterns.</figcaption>
+          </figure>
+          <figure class="media-frame">
+            <img src="assets/figures/main_compare.png" alt="Static qualitative comparison on complex motion patterns.">
+            <figcaption>Static comparison figure for complex motion patterns.</figcaption>
+          </figure>
+          <figure class="media-frame">
+            <img src="assets/figures/main_compare_diverse.png" alt="Qualitative comparison on batch diversity.">
+            <figcaption>Diverse batches generated from the same input motion.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section id="applications" class="section">
+        <div class="section-heading">
+          <h2>Applications</h2>
+          <p>SpecMo supports practical authoring tasks from crowd generation to constrained editing.</p>
+        </div>
+
+        <article class="app-block">
+          <div class="app-copy">
+            <p class="eyebrow">Application 01</p>
+            <h3>Coherent and Diverse Crowd Generation</h3>
+            <p>
+              From a single reference motion, SpecMo generates crowd-like batches under different BSC settings. Pull-based settings produce coherent crowds with shared coarse behavior, while push-based settings produce diverse crowds with broader individual variation.
+            </p>
+          </div>
+          <div class="paired-media">
+            <figure class="media-frame">
+              <video autoplay muted loop playsinline preload="metadata">
+                <source src="assets/videos/teasers/dance.mp4" type="video/mp4">
+              </video>
+              <figcaption>Representative crowd generation video.</figcaption>
+            </figure>
+            <figure class="media-frame">
+              <img src="assets/figures/applacation_crowd_coherent_diverse.png" alt="Coherent and diverse crowd generation controlled by BSC.">
+              <figcaption>BSC adjusts the consistency-diversity trade-off through frequency-domain pull and push objectives.</figcaption>
+            </figure>
+            <figure class="media-frame">
+              <img src="assets/figures/applacation_crowd.png" alt="Crowd motion generated from one example.">
+              <figcaption>Crowd motions across different characters and skeletons.</figcaption>
+            </figure>
+          </div>
+        </article>
+
+        <article class="app-block">
+          <div class="app-copy">
+            <p class="eyebrow">Application 02</p>
+            <h3>Anchor-Based Interactive Control</h3>
+            <p>
+              Users can select a preferred sample as an anchor, then pull new samples toward it for refinement or push samples away from it for exploration.
+            </p>
+          </div>
+          <figure class="media-frame">
+            <video autoplay muted loop playsinline preload="auto">
+              <source src="assets/videos/anchor/video%20-%20interactivce.mp4" type="video/mp4">
+            </video>
+            <figcaption>Interactive navigation between targeted refinement and broad exploration.</figcaption>
+          </figure>
+        </article>
+
+        <article class="app-block">
+          <div class="app-copy">
+            <p class="eyebrow">Application 03</p>
+            <h3>Motion Editing and Composition</h3>
+            <p>
+              Masked denoising supports spatial completion, motion expansion, keyframe-guided generation, and in-betweening while keeping user-specified regions fixed.
+            </p>
+          </div>
+          <figure class="media-frame">
+            <video autoplay muted loop playsinline preload="auto">
+              <source src="assets/videos/edit/video_edit.mp4" type="video/mp4">
+            </video>
+            <figcaption>Spatial and temporal editing with fixed-input constraints.</figcaption>
+          </figure>
+        </article>
+
+        <article class="app-block">
+          <div class="app-copy">
+            <p class="eyebrow">Application 04</p>
+            <h3>Long and Variable-Length Motion</h3>
+            <p>
+              The local-attention backbone applies to sequences shorter or longer than the training reference, enabling long and variable-length synthesis with the same model.
+            </p>
+          </div>
+          <figure class="media-frame">
+            <video autoplay muted loop playsinline preload="auto">
+              <source src="assets/videos/long/video_long.mp4" type="video/mp4">
+            </video>
+            <figcaption>Variable-length synthesis from one reference sequence.</figcaption>
+          </figure>
+        </article>
+      </section>
+
+      <section id="ablation" class="section">
+        <div class="section-heading">
+          <h2>Ablation Study</h2>
+          <p>We evaluate the contribution of the spectral prior and batch-level control.</p>
+        </div>
+        <div class="single-result">
+          <figure class="media-frame">
+            <img src="assets/figures/abla_key_components.png" alt="Ablation of key components.">
+            <figcaption>GSP improves global trend preservation, while BSC improves controllable batch variation.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section id="efficiency" class="section">
+        <div class="section-heading">
+          <h2>Efficiency Analysis</h2>
+          <p>We measure runtime and memory under different batch sizes, BSC steps, and generation lengths.</p>
+        </div>
+        <div class="wide-result">
+          <figure class="media-frame">
+            <img src="assets/figures/efficiency_train_infer_compare.png" alt="Training and inference efficiency comparison.">
+            <figcaption>Training and inference efficiency comparison extracted from the quantitative benchmark table.</figcaption>
+          </figure>
+        </div>
+        <div class="analysis-grid">
+          <figure class="media-frame">
+            <img src="assets/figures/efficiency_batch_size_time_memory.png" alt="Efficiency under different batch sizes.">
+            <figcaption>Batch-size scaling for parallel generation.</figcaption>
+          </figure>
+          <figure class="media-frame">
+            <img src="assets/figures/efficiency_bsc_steps_time_per_sample_memory.png" alt="Efficiency under different BSC steps.">
+            <figcaption>Additional BSC steps mainly add predictable computation.</figcaption>
+          </figure>
+          <figure class="media-frame">
+            <img src="assets/figures/efficiency_length_time_per_sample_memory.png" alt="Efficiency under different generation lengths.">
+            <figcaption>Runtime and memory scale smoothly with sequence length.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section id="citation" class="section">
+        <h2>Citation</h2>
+        <pre><code>@article{anonymous2026specmo,
+  title   = {SpecMo: Spectral Control for Coherent and Diverse Single-to-Many Motion Synthesis},
+  author  = {Anonymous Author(s)},
+  journal = {Anonymous Submission},
+  year    = {2026}
+}</code></pre>
+      </section>
+    </main>
+
+    <footer>
+      <p>Anonymous project page for review.</p>
+    </footer>
+  </body>
+</html>
